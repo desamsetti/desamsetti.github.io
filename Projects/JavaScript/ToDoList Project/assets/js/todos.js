@@ -12,7 +12,7 @@ $("ul").on("click","span",function(event){
 	});
 
 	var sound = new Howl({
-  	src: ['bubbles.mp3']
+  	src: ['C:/Users/MY DELL/Desktop/Web Development/JQuery/ToDoList Project/assets/js/tick.mp3']
 	});
 	
 	sound.play();	
