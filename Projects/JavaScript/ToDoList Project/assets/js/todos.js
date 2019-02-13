@@ -8,9 +8,17 @@ $("ul").on("click","li",function(){
 $("ul").on("click","span",function(event){	
 	event.stopPropagation();
 	$(this).parent().fadeOut(500,function(){
-		$(this).remove();
+		$(this).remove();		
 	});
-})
+
+	var sound = new Howl({
+  	src: ['bubbles.mp3']
+	});
+	
+	sound.play();	
+
+});
+
 
 $("input[type='text'").keypress(function(event){
 	if(event.which === 13)
