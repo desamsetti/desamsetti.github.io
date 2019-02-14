@@ -13,13 +13,32 @@
 
 		<!--<h1>To-do List<i class="fa fa-plus" aria-hidden="true"></i></h1>-->
 		<h1>To-Do List<i class="fa fa-plus"></i></h1>		
-		<input type="text" placeholder="Add New Todo                       - Hit Enter">		
+		<input type="text" placeholder="Add New Todo                       - Hit Enter">
 		<ul>
 			<li><span><i class="fa fa-trash"></i></span> Go To Potions Class</li>
 			<li><span><i class="fa fa-trash"></i></span> Buy New Robes</li>
 			<li><span><i class="fa fa-trash"></i></span> Visit Hagrid</li>
 		</ul>
 	</div>
+
+
+	<script>
+		var audio = new Audio();
+		audio.src = "tick.mp3";
+
+		$("ul").on("click","span",function(event){	
+		event.stopPropagation();
+		$(this).parent().fadeOut(500,function(){
+			$(this).remove();		
+		});		
+		/*var sound = new Howl({
+	  	src: ['C:/Users/MY DELL/Desktop/Web Development/JQuery/ToDoList Project/assets/js/tick.mp3']
+		});
+	
+		sound.play();*/
+		audio.play();
+});
+	</script>
 	<script type="text/javascript" src="assets/js/todos.js"></script>	
 </body>
 </html>
